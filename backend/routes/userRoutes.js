@@ -11,7 +11,6 @@ router.post(
         check('password', 'Пароль должен быть не менее 6 символов').isLength({ min: 6 }),
     ],
     (req, res, next) => {
-        console.log(req)
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });

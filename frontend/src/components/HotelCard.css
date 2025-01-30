@@ -1,0 +1,41 @@
+.hotel-card {
+    display: flex;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.hotel-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.hotel-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hotel-info h3 {
+    margin: 0 0 10px;
+}
+
+.hotel-info p {
+    margin: 0 0 10px;
+}
+
+.hotel-info button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hotel-info button:hover {
+    background-color: #0056b3;
+}

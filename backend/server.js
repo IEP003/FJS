@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const userRoutes = require('./routes/userRoutes');
+const hotelRoutes = require('./routes/hotelRoutes');
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ mongoose.connect(process.env.MONGO_URI)
     .catch((error) => console.log(`Error connecting to MongoDB: ${error.message}`));
 
 app.use('/api/users', userRoutes);
+app.use('/api/hotels', hotelRoutes);
 
 const PORT = process.env.PORT || 5000;
 

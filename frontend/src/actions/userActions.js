@@ -8,7 +8,6 @@ import {
 
 export const register = (name, email, password) => async (dispatch) => {
     try {
-        console.log(name, email, password)
         const { data } = await axios.post('/api/users/register', { name, email, password });
 
         dispatch({ type: USER_REGISTER_SUCCESS, payload: data });

@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+}
+
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-form label {
+    margin-bottom: 10px;
+}
+
+.search-form input {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+.hotel-results {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
