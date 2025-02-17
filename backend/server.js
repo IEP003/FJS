@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const userRoutes = require('./routes/userRoutes');
 const hotelRoutes = require('./routes/hotelRoutes');
+const bookingRoutes = require('./routes/bookingRoutes');
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use('/api/users', userRoutes);
 app.use('/api/hotels', hotelRoutes);
+app.use('/api/bookings', bookingRoutes);
 
 const PORT = process.env.PORT || 5000;
 

@@ -1,0 +1,30 @@
+.booking-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.booking-card-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.booking-card-info {
+    padding: 10px;
+    flex: 1;
+}
+
+.booking-card-info h3 {
+    margin: 0 0 10px;
+}
+
+.booking-card-info p {
+    margin: 0 0 5px;
+}
+
+.booking-card-info button {
+    margin-top: 10px;
+}

@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { userLoginReducer, userRegisterReducer } from './reducers/userReducers';
-import { hotelListReducer, hotelCreateReducer } from './reducers/hotelReducers';
+import { bookingCreateReducer, bookingListReducer } from './reducers/bookingReducers';
 
 const reducer = {
     userLogin: userLoginReducer,
     userRegister: userRegisterReducer,
-    hotelList: hotelListReducer,
-    hotelCreate: hotelCreateReducer,
+    bookingCreate: bookingCreateReducer,
+    bookingList: bookingListReducer,
 };
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
