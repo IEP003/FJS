@@ -17,6 +17,8 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
+console.log(process.env.MONGO_URI);
+
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB connected'))
     .catch((error) => console.log(`Error connecting to MongoDB: ${error.message}`));
