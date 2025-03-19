@@ -58,7 +58,7 @@ const HotelSearchScreen = () => {
                             <Calendar
                                 onChange={setCheckOutDate}
                                 value={checkOutDate}
-                                minDate={new Date(checkInDate).setDate(checkInDate.getDate() + 1)}
+                                minDate={new Date(new Date(checkInDate).setDate(checkInDate.getDate() + 1))}
                             />
                         </label>
                         <button onClick={handleSearch}>Искать</button>

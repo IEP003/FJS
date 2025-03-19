@@ -8,6 +8,8 @@ import {
     BOOKING_LIST_FAIL,
 } from '../constants/bookingConstants';
 
+axios.defaults.baseURL = 'http://localhost:5000';
+
 export const createBooking = (bookingData) => async (dispatch, getState) => {
     try {
         dispatch({ type: BOOKING_CREATE_REQUEST });

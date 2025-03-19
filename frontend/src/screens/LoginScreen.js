@@ -15,19 +15,24 @@ const LoginScreen = () => {
 
     useEffect(() => {
         if (userInfo) {
-            navigate('/');
+            localStorage.setItem('userInfo', JSON.stringify(userInfo)); // Сохраняем пользователя
+            navigate(userInfo.role === 'admin' ? '/admin' : '/profile'); // Перенаправление по роли
         }
     }, [navigate, userInfo]);
 
     const submitHandler = (e) => {
         e.preventDefault();
+        if (!email || !password) {
+            alert('Пожалуйста, заполните все поля!');
+            return;
+        }
         dispatch(login(email, password));
     };
 
     return (
         <div className="login-container">
             <h1>Войти</h1>
-            {error && <div>{error}</div>}
+            {error && <div className="error-message">{error}</div>}
             {loading && <div>Загрузка...</div>}
             <form onSubmit={submitHandler}>
                 <input

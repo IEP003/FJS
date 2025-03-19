@@ -6,6 +6,9 @@ import {
     USER_LOGIN_FAIL,
 } from '../constants/userConstants';
 
+axios.defaults.baseURL = 'http://localhost:5000';
+
+
 export const register = (name, email, password) => async (dispatch) => {
     try {
         const { data } = await axios.post('/api/users/register', { name, email, password });

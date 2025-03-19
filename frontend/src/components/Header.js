@@ -10,6 +10,7 @@ const Header = () => {
                 <Link to="/hotels">Поиск гостиницы</Link>
                 <Link to="/login">Войти</Link>
                 <Link to="/register">Регистрация</Link>
+                <Link to="/chat">Чат</Link>
             </nav>
         </header>
     );

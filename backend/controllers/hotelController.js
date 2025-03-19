@@ -1,6 +1,7 @@
 const Hotel = require('../models/Hotel');
 
 const getHotels = async (req, res) => {
+    console.log(res)
     const hotels = await Hotel.find({});
     res.json(hotels);
 };

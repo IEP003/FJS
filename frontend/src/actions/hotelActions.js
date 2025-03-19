@@ -8,6 +8,8 @@ import {
     HOTEL_CREATE_FAIL,
 } from '../constants/hotelConstants';
 
+axios.defaults.baseURL = 'http://localhost:5000';
+
 export const listHotels = () => async (dispatch) => {
     try {
         dispatch({ type: HOTEL_LIST_REQUEST });

@@ -1,6 +1,7 @@
 const express = require('express');
 const { check, validationResult } = require('express-validator');
-const { registerUser, authUser } = require('../controllers/userController');
+const { registerUser, authUser, getUserProfile, updateUserProfile  } = require('../controllers/userController');
+const { protect, adminMiddleware  } = require('../middlewares/authMiddleware');  // Импортируем protect
 const router = express.Router();
 
 router.post(
@@ -35,5 +36,13 @@ router.post(
     },
     authUser
 );
+
+router.get('/profile', protect, getUserProfile);  // Доступно для всех авторизованных пользователей
+router.put('/profile', protect, updateUserProfile);  // Доступно для всех авторизованных пользователей
+
+router.get('/admin', protect, adminMiddleware, (req, res) => { 
+    res.send('Администраторский доступ');
+});  // Доступно только для администраторов
+
 
 module.exports = router;
